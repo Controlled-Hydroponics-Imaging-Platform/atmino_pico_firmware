@@ -1,0 +1,6 @@
+[submodule "lib/pico_captive_connect"]
+	path = lib/pico_captive_connect
+	url = git@github.com:mohas95/pico_captive_connect.git
+[submodule "lib/pico_common_sensors_lib"]
+	path = lib/pico_common_sensors_lib
+	url = git@github.com:mohas95/pico_common_sensors_lib.git
