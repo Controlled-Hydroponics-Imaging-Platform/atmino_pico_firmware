@@ -18,7 +18,7 @@ set(PICO_BOARD pico2_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(PhotoCon C CXX ASM)
+project(atmino C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
@@ -48,6 +48,7 @@ pico_enable_stdio_usb(${PROJECT_NAME} 1)
 target_link_libraries(${PROJECT_NAME}
         pico_stdlib
         hardware_i2c
+        hardware_adc
         pico_captive_connect
         pico_common_sensors_lib
         )
