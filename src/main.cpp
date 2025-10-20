@@ -93,6 +93,9 @@ int main(){
 
         watchdog_update();
         net_task();
+        if (net_is_connected() && !mqtt_is_connected()) {
+            mqtt_try_connect();
+        }
 
         if (par_sensor.read()){
             auto par_data = par_sensor.getData(); 
