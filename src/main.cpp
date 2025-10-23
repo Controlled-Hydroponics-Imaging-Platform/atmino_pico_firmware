@@ -85,7 +85,7 @@ int main(){
     uint64_t last_log = time_us_64();
 
     net_init();
-    watchdog_enable(30000, 1); 
+    watchdog_enable(60000, 1); 
     
 
     // main loop
