@@ -126,7 +126,7 @@ int main(){
         }
 
         // Publish only if MQTT connected and it's time
-        if (mqtt_is_connected() && absolute_time_diff_us(get_absolute_time(), next_pub) < 0) {
+        if (!payload.empty() && mqtt_is_connected() && absolute_time_diff_us(get_absolute_time(), next_pub) < 0) {
 
             if (publish_mqtt(MQTT_TOPIC, payload.c_str(), payload.length())) {
                 // printf("[APP] Published temp message: %.2f\n", temp);
